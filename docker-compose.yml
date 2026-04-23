@@ -1,0 +1,92 @@
+services:
+
+  # ── PostgreSQL 16 ────────────────────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       ${DB_DATABASE:-ong_infentil}
+      POSTGRES_USER:     ${DB_USERNAME:-ong_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-ong_user} -d ${DB_DATABASE:-ong_infentil}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - internal
+
+  # ── PHP-FPM application ──────────────────────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - storage_data:/var/www/html/storage/app
+      - logs_data:/var/www/html/storage/logs
+    networks:
+      - internal
+
+  # ── Nginx ────────────────────────────────────────────────────────────────────
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "${NGINX_HTTP_PORT:-80}:80"
+      - "${NGINX_HTTPS_PORT:-443}:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      # Serve public/ files directly without hitting PHP-FPM
+      - ./public:/var/www/html/public:ro
+      - storage_data:/var/www/html/storage/app:ro
+    depends_on:
+      - app
+    networks:
+      - internal
+      - external
+
+  # ── Scheduler (cron via Laravel artisan) ─────────────────────────────────────
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+    entrypoint: []
+    command: >
+      sh -c "while true; do
+        php /var/www/html/artisan schedule:run --no-interaction;
+        sleep 60;
+      done"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+
+volumes:
+  db_data:
+  storage_data:
+  logs_data:
+
+networks:
+  internal:
+    driver: bridge
+  external:
+    driver: bridge
