@@ -8,7 +8,7 @@ Site web de l'ONG Infentil (santé infantile au Bénin), construit avec **Larave
 
 | Couche | Technologie |
 |---|---|
-| Backend | Laravel 13 / PHP 8.3 |
+| Backend | Laravel 13 / PHP 8.4 |
 | Back-office | Filament 4 |
 | Frontend | Blade · TailwindCSS v4 · AlpineJS 3 |
 | Base de données | PostgreSQL 16 |
@@ -220,7 +220,7 @@ gunzip -c backup_20250101_120000.sql.gz \
                        │ FastCGI :9000
      ┌─────────────────▼─────────────────────────┐
      │                  app                        │
-     │           (php:8.3-fpm-alpine)              │
+     │           (php:8.4-fpm-alpine)              │
      │  • PHP-FPM (20 workers max)                 │
      │  • Queue workers ×2 (supervisord)           │
      │  • Scheduler (service séparé)               │
@@ -255,7 +255,7 @@ gunzip -c backup_20250101_120000.sql.gz \
 # Démarrer la stack
 docker compose up -d
 
-# Ou sans Docker (nécessite PHP 8.3 + PostgreSQL local)
+# Ou sans Docker (nécessite PHP 8.4 + PostgreSQL local)
 cp .env.example .env
 # Éditer .env avec DB_HOST=127.0.0.1 et les bons identifiants
 composer install

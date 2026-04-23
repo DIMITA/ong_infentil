@@ -32,10 +32,10 @@ RUN composer install \
 # ─────────────────────────────────────────────
 # Stage 3 — Production image (PHP-FPM 8.3)
 # ─────────────────────────────────────────────
-FROM php:8.3-fpm-alpine AS app
+FROM php:8.4-fpm-alpine AS app
 
 LABEL org.opencontainers.image.title="ONG Infentil"
-LABEL org.opencontainers.image.description="Laravel 13 application for ONG Infentil"
+LABEL org.opencontainers.image.description="Laravel 13 / PHP 8.4 application for ONG Infentil"
 
 # System dependencies & PHP extensions
 RUN apk add --no-cache \
