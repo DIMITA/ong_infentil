@@ -1,0 +1,20 @@
+<?php
+return [
+    'mission_title' => 'Notre Mission',
+    'mission_subtitle' => 'Trois piliers d\'action pour chaque enfant béninois',
+    'mission_health' => 'Santé',
+    'mission_health_text' => 'Consultations médicales gratuites, vaccinations, et suivi nutritionnel pour les enfants en zones rurales et périurbaines.',
+    'mission_education' => 'Éducation',
+    'mission_education_text' => 'Accès à l\'éducation, distribution de matériel scolaire et formation des parents pour un soutien durable.',
+    'mission_protection' => 'Protection',
+    'mission_protection_text' => 'Accompagnement psychosocial, protection contre les abus et réinsertion des enfants en situation de vulnérabilité.',
+    'upcoming_events' => 'Prochains Événements',
+    'upcoming_events_subtitle' => 'Rejoignez-nous sur le terrain',
+    'testimonials_title' => 'Ce qu\'ils disent',
+    'testimonials_subtitle' => 'Témoignages de bénéficiaires et partenaires',
+    'partners_title' => 'Nos Partenaires',
+    'cta_title' => 'Ensemble, nous pouvons faire plus',
+    'cta_text' => 'Chaque don, chaque heure de bénévolat, chaque partage compte. Rejoignez notre réseau de solidarité.',
+    'cta_donate' => 'Faire un don',
+    'cta_contact' => 'Nous contacter',
+];

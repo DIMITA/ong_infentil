@@ -1,0 +1,20 @@
+<?php
+return [
+    'mission_title' => 'Our Mission',
+    'mission_subtitle' => 'Three pillars of action for every Beninese child',
+    'mission_health' => 'Health',
+    'mission_health_text' => 'Free medical consultations, vaccinations, and nutritional monitoring for children in rural and peri-urban areas.',
+    'mission_education' => 'Education',
+    'mission_education_text' => 'Access to education, school supplies distribution and parent training for lasting support.',
+    'mission_protection' => 'Protection',
+    'mission_protection_text' => 'Psychosocial support, protection from abuse and reintegration of children in vulnerable situations.',
+    'upcoming_events' => 'Upcoming Events',
+    'upcoming_events_subtitle' => 'Join us in the field',
+    'testimonials_title' => 'What they say',
+    'testimonials_subtitle' => 'Testimonials from beneficiaries and partners',
+    'partners_title' => 'Our Partners',
+    'cta_title' => 'Together, we can do more',
+    'cta_text' => 'Every donation, every hour of volunteering, every share counts. Join our solidarity network.',
+    'cta_donate' => 'Donate',
+    'cta_contact' => 'Contact us',
+];

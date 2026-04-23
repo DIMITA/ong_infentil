@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'DM Serif Display', ui-serif, Georgia, serif;
+
+    --color-primary-50: #f0fdf4;
+    --color-primary-100: #dcfce7;
+    --color-primary-200: #bbf7d0;
+    --color-primary-300: #86efac;
+    --color-primary-400: #4ade80;
+    --color-primary-500: #22c55e;
+    --color-primary-600: #16a34a;
+    --color-primary-700: #15803d;
+    --color-primary-800: #166534;
+    --color-primary-900: #14532d;
+    --color-primary-950: #1B5E20;
+
+    --color-accent-50: #fdf8f0;
+    --color-accent-100: #faecd8;
+    --color-accent-200: #f5d6ad;
+    --color-accent-300: #edba78;
+    --color-accent-400: #e49843;
+    --color-accent-500: #C17D3C;
+    --color-accent-600: #b86b2e;
+    --color-accent-700: #965327;
+    --color-accent-800: #7a4425;
+    --color-accent-900: #643922;
+
+    --color-earth-50: #FAFAF7;
+    --color-earth-900: #1A1A1A;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        color: var(--color-earth-900);
+        background-color: var(--color-earth-50);
+        font-family: var(--font-sans);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: var(--font-display);
+    }
+    .text-balance {
+        text-wrap: balance;
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out both;
+    }
+    .animate-count-up {
+        animation: countUp 2s ease-out both;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
