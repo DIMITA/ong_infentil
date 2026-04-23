@@ -1,6 +1,7 @@
 <?php
 return [
     'home' => 'Accueil',
+    'blog' => 'Blog',
     'about' => 'À propos',
     'actions' => 'Nos actions',
     'events' => 'Événements',

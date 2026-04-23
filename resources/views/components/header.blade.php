@@ -29,6 +29,7 @@
                         route('about') => __('app.about'),
                         route('actions.index') => __('app.actions'),
                         route('events.index') => __('app.events'),
+                        route('blog.index') => __('app.blog'),
                         route('documents.index') => __('app.documents'),
                         route('contact') => __('app.contact'),
                     ];
