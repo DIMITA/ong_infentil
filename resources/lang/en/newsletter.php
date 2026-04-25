@@ -8,7 +8,7 @@ return [
     'check_email' => 'Thank you! Check your email to confirm your subscription.',
     'confirmed' => 'Your subscription is confirmed. Welcome!',
     'unsubscribed' => 'You have been successfully unsubscribed.',
-    'confirm_subject' => 'Confirm your subscription — NGO Infentil',
-    'welcome_subject' => 'Welcome to our community — NGO Infentil',
+    'confirm_subject' => 'Confirm your subscription — Graines de vie',
+    'welcome_subject' => 'Welcome to our community — Graines de vie',
     'already_subscribed' => 'You are already subscribed.',
 ];

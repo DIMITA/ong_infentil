@@ -9,7 +9,7 @@ return [
     'amount_placeholder' => 'Amount (FCFA)',
     'donate_button' => 'Donate',
     'merci_title' => 'Thank you for your donation!',
-    'merci_text' => 'Your generosity enables NGO Infentil to continue its mission for Beninese children.',
+    'merci_text' => 'Your generosity enables Graines de vie to continue its mission for Beninese children.',
     'secure' => 'Secure payment',
     'tax_info' => 'Tax-deductible donation according to applicable legislation',
 ];

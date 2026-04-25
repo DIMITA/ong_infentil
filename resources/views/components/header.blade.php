@@ -15,7 +15,7 @@
                 </div>
                 <div>
                     <span :class="scrolled ? 'text-[#1B5E20]' : 'text-white'" class="font-display text-xl font-bold leading-tight transition-colors">
-                        ONG Infentil
+                        Graines de vie
                     </span>
                     <p :class="scrolled ? 'text-gray-500' : 'text-white/70'" class="text-xs hidden sm:block transition-colors">Bénin · Santé Infantile</p>
                 </div>

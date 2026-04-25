@@ -24,12 +24,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                             </svg>
                         </div>
-                        <span class="font-display text-2xl font-bold">ONG Infentil</span>
+                        <span class="font-display text-2xl font-bold">Graines de vie</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
                         {{ app()->getLocale() === 'fr'
-                            ? 'ONG béninoise engagée depuis 2012 pour la santé et le bien-être des enfants en situation de précarité.'
-                            : 'Beninese NGO committed since 2012 to the health and well-being of children in precarious situations.' }}
+                            ? 'ONG béninoise engagée depuis 2015 pour la santé, la nutrition et l\'éducation des enfants dans les zones rurales du Bénin.'
+                            : 'Beninese NGO committed since 2015 to health, nutrition and education for children in rural Benin.' }}
                     </p>
                     <!-- Social links -->
                     <div class="flex items-center gap-4 mt-6">
@@ -100,7 +100,7 @@
     <div class="border-t border-white/10 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p class="text-gray-500 text-xs">
-                © {{ date('Y') }} ONG Infentil. {{ app()->getLocale() === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.' }}
+                © {{ date('Y') }} Graines de vie. {{ app()->getLocale() === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.' }}
             </p>
             <div class="flex items-center gap-4">
                 <a href="{{ route('lang.switch', app()->getLocale() === 'fr' ? 'en' : 'fr') }}"

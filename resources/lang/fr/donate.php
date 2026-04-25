@@ -9,7 +9,7 @@ return [
     'amount_placeholder' => 'Montant (FCFA)',
     'donate_button' => 'Faire un don',
     'merci_title' => 'Merci pour votre don !',
-    'merci_text' => 'Votre générosité permet à l\'ONG Infentil de poursuivre sa mission auprès des enfants béninois.',
+    'merci_text' => 'Votre générosité permet à l\'Graines de vie de poursuivre sa mission auprès des enfants béninois.',
     'secure' => 'Paiement sécurisé',
     'tax_info' => 'Don déductible des impôts selon la législation applicable',
 ];

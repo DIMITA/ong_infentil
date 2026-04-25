@@ -8,7 +8,7 @@ return [
     'check_email' => 'Merci ! Vérifiez votre email pour confirmer votre abonnement.',
     'confirmed' => 'Votre abonnement est confirmé. Bienvenue !',
     'unsubscribed' => 'Vous avez été désabonné(e) avec succès.',
-    'confirm_subject' => 'Confirmez votre abonnement — ONG Infentil',
-    'welcome_subject' => 'Bienvenue dans notre communauté — ONG Infentil',
+    'confirm_subject' => 'Confirmez votre abonnement — Graines de vie',
+    'welcome_subject' => 'Bienvenue dans notre communauté — Graines de vie',
     'already_subscribed' => 'Vous êtes déjà abonné(e).',
 ];

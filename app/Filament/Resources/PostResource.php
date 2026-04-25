@@ -170,7 +170,7 @@ class PostResource extends Resource
                         Forms\Components\TextInput::make('author_name')
                             ->label('Auteur')
                             ->maxLength(255)
-                            ->placeholder('ONG Infentil'),
+                            ->placeholder('Graines de vie'),
                     ]),
 
                 Forms\Components\Section::make('Image à la une')
@@ -222,7 +222,7 @@ class PostResource extends Resource
 
                 Tables\Columns\TextColumn::make('author_name')
                     ->label('Auteur')
-                    ->placeholder('ONG Infentil'),
+                    ->placeholder('Graines de vie'),
 
                 Tables\Columns\IconColumn::make('is_published')
                     ->label('Publié')

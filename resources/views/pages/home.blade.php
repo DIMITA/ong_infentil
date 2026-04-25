@@ -269,6 +269,143 @@
 </section>
 @endif
 
+{{-- NOS 3 PILIERS --}}
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+            <span class="text-[#C17D3C] text-sm font-semibold uppercase tracking-widest">
+                {{ app()->getLocale() === 'fr' ? 'Notre approche' : 'Our approach' }}
+            </span>
+            <h2 class="font-display text-4xl font-bold text-[#1A1A1A] mt-2">
+                {{ app()->getLocale() === 'fr' ? 'Trois piliers, une mission' : 'Three pillars, one mission' }}
+            </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            @php
+            $pillars = app()->getLocale() === 'fr' ? [
+                [
+                    'icon' => 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+                    'label' => 'Santé',
+                    'desc'  => 'Caravanes médicales mobiles, vaccinations, soins préventifs et suivi nutritionnel dans les villages les plus isolés du Bénin.',
+                    'stat'  => '24 000 consultations',
+                ],
+                [
+                    'icon' => 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+                    'label' => 'Nutrition',
+                    'desc'  => 'Centres communautaires de nutrition, distribution de compléments alimentaires et formation des mères à une alimentation adaptée.',
+                    'stat'  => '8 400 enfants suivis',
+                ],
+                [
+                    'icon' => 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+                    'label' => 'Éducation',
+                    'desc'  => "Bourses scolaires, fournitures, accès aux cantines et soutien aux familles pour maintenir les enfants à l'école toute l'année.",
+                    'stat'  => '37 villages couverts',
+                ],
+            ] : [
+                [
+                    'icon' => 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+                    'label' => 'Health',
+                    'desc'  => 'Mobile medical caravans, vaccinations, preventive care and nutritional follow-up in the most isolated villages of Benin.',
+                    'stat'  => '24,000 consultations',
+                ],
+                [
+                    'icon' => 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+                    'label' => 'Nutrition',
+                    'desc'  => 'Community nutrition centres, distribution of food supplements and training mothers in appropriate feeding practices.',
+                    'stat'  => '8,400 children monitored',
+                ],
+                [
+                    'icon' => 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+                    'label' => 'Education',
+                    'desc'  => 'School scholarships, supplies, canteen access and family support to keep children in school all year long.',
+                    'stat'  => '37 villages covered',
+                ],
+            ];
+            @endphp
+            @foreach($pillars as $i => $p)
+            <div class="group relative bg-[#FAFAF7] rounded-3xl p-8 hover:bg-[#1B5E20] transition-colors duration-300 overflow-hidden"
+                 x-data x-intersect="$el.classList.add('animate-fade-in-up')"
+                 style="animation-delay: {{ $i * 100 }}ms">
+                <div class="w-14 h-14 bg-[#1B5E20] group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ $p['icon'] }}"/>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-[#1A1A1A] group-hover:text-white mb-3 transition-colors">{{ $p['label'] }}</h3>
+                <p class="text-gray-600 group-hover:text-white/80 text-sm leading-relaxed mb-5 transition-colors">{{ $p['desc'] }}</p>
+                <span class="inline-block text-xs font-semibold text-[#C17D3C] group-hover:text-[#f0a060] bg-[#C17D3C]/10 group-hover:bg-white/10 px-3 py-1 rounded-full transition-colors">
+                    {{ $p['stat'] }}
+                </span>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-10">
+            <a href="{{ route('actions.index') }}"
+               class="inline-flex items-center gap-2 text-[#1B5E20] font-semibold hover:gap-3 transition-all">
+                {{ app()->getLocale() === 'fr' ? 'Voir toutes nos actions' : 'See all our actions' }}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+{{-- REPORTAGES VIDÉO --}}
+<section class="py-20 bg-[#FAFAF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-[#C17D3C] text-sm font-semibold uppercase tracking-widest">
+                {{ app()->getLocale() === 'fr' ? 'Ils ont suivi nos équipes' : 'They followed our teams' }}
+            </span>
+            <h2 class="font-display text-4xl font-bold text-[#1A1A1A] mt-2">
+                {{ app()->getLocale() === 'fr' ? 'Reportages sur le terrain' : 'Field reports' }}
+            </h2>
+            <p class="text-gray-500 mt-3 max-w-xl mx-auto text-sm">
+                {{ app()->getLocale() === 'fr'
+                    ? 'Des documentaristes ont accompagné nos équipes pour raconter ce que font les mots ne peuvent pas.'
+                    : 'Filmmakers joined our teams to capture what words alone cannot convey.' }}
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="aspect-video">
+                    <iframe class="w-full h-full"
+                        src="https://www.youtube.com/embed/Y67vnHM3lPE"
+                        title="Graines de vie, graines d'espoir"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-5">
+                    <p class="font-display font-bold text-[#1A1A1A] text-lg">Graines de vie, graines d'espoir</p>
+                    <p class="text-gray-500 text-sm mt-1">
+                        {{ app()->getLocale() === 'fr' ? 'Documentaire sur les actions terrain de l\'ONG au Bénin.' : 'Documentary on the NGO\'s field work in Benin.' }}
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="aspect-video">
+                    <iframe class="w-full h-full"
+                        src="https://www.youtube.com/embed/tjD3Gbs1C0g"
+                        title="Ce que l'Afrique m'a soufflé"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-5">
+                    <p class="font-display font-bold text-[#1A1A1A] text-lg">Ce que l'Afrique m'a soufflé</p>
+                    <p class="text-gray-500 text-sm mt-1">
+                        {{ app()->getLocale() === 'fr' ? 'Un regard extérieur sur la mission de Graines de vie.' : 'An outside perspective on the Graines de vie mission.' }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- CTA --}}
 <section class="py-20 bg-gradient-to-br from-[#C17D3C] to-[#a06830] relative overflow-hidden">
     <div class="absolute inset-0 opacity-10"

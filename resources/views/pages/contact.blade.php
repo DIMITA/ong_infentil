@@ -72,7 +72,7 @@
                         src="https://www.openstreetmap.org/export/embed.html?bbox=2.3%2C6.3%2C2.5%2C6.4&layer=mapnik"
                         class="w-full h-full border-0"
                         loading="lazy"
-                        title="Carte ONG Infentil">
+                        title="Carte Graines de vie">
                     </iframe>
                 </div>
             </div>

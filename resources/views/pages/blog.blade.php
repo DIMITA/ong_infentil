@@ -75,7 +75,7 @@
                     </h2>
                     <p class="text-gray-500 leading-relaxed mb-6 line-clamp-3">{{ $featured->getExcerpt() }}</p>
                     <div class="flex items-center gap-4 text-sm text-gray-400">
-                        <span>{{ $featured->author_name ?: 'ONG Infentil' }}</span>
+                        <span>{{ $featured->author_name ?: 'Graines de vie' }}</span>
                         <span>&middot;</span>
                         <span>{{ $featured->published_at?->translatedFormat('j F Y') }}</span>
                         <span>&middot;</span>
@@ -120,7 +120,7 @@
                     </h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">{{ $post->getExcerpt() }}</p>
                     <div class="flex items-center justify-between text-xs text-gray-400 mt-auto pt-4 border-t border-gray-100">
-                        <span>{{ $post->author_name ?: 'ONG Infentil' }}</span>
+                        <span>{{ $post->author_name ?: 'Graines de vie' }}</span>
                         <div class="flex items-center gap-2">
                             <span>{{ $post->published_at?->translatedFormat('j M Y') }}</span>
                             <span>&middot;</span>

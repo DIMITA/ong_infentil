@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('meta_description', __('home.mission_health_text'))">
-    <title>@yield('title', 'ONG Infentil') — ONG Infentil Bénin</title>
+    <title>@yield('title', 'Graines de vie') — Graines de vie Bénin</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

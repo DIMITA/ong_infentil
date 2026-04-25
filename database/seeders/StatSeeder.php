@@ -9,10 +9,10 @@ class StatSeeder extends Seeder
     public function run(): void
     {
         $stats = [
-            ['key' => 'children_helped', 'value' => 12500, 'label_fr' => 'Enfants aidés', 'label_en' => 'Children helped', 'icon' => 'heroicon-o-heart', 'order' => 1],
-            ['key' => 'zones_covered', 'value' => 48, 'label_fr' => 'Zones couvertes', 'label_en' => 'Zones covered', 'icon' => 'heroicon-o-map-pin', 'order' => 2],
-            ['key' => 'years_active', 'value' => 12, 'label_fr' => "Années d'activité", 'label_en' => 'Years of activity', 'icon' => 'heroicon-o-calendar', 'order' => 3],
-            ['key' => 'partners', 'value' => 35, 'label_fr' => 'Partenaires', 'label_en' => 'Partners', 'icon' => 'heroicon-o-building-office', 'order' => 4],
+            ['key' => 'children_helped',  'value' => 30,   'label_fr' => 'Enfants accompagnés',     'label_en' => 'Children supported',      'icon' => 'heroicon-o-heart',                    'order' => 1],
+            ['key' => 'consultations',    'value' => 300,  'label_fr' => 'Consultations médicales',  'label_en' => 'Medical consultations',    'icon' => 'heroicon-o-clipboard-document-check', 'order' => 2],
+            ['key' => 'missions',         'value' => 8,    'label_fr' => 'Missions bénévoles',       'label_en' => 'Volunteer missions',       'icon' => 'heroicon-o-globe-alt',                'order' => 3],
+            ['key' => 'partners',         'value' => 12,   'label_fr' => 'Partenaires & bénévoles',  'label_en' => 'Partners & volunteers',    'icon' => 'heroicon-o-building-office',          'order' => 4],
         ];
 
         foreach ($stats as $stat) {
